@@ -1,0 +1,37 @@
+{
+  "name": "dobukulbira",
+  "version": "0.0.1",
+  "description": "REPL console for modern node.js app.",
+  "main": "index.js",
+  "bin": {
+    "dobukulbira": "index.js"
+  },
+  "dependencies": {
+    "glob": "^7.1.2",
+    "lodash.foreach": "^4.5.0"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "mongoose": ">= 4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangkaiyulw/dobukulbira.git"
+  },
+  "keywords": [
+    "mongoose",
+    "console",
+    "repl",
+    "koa",
+    "server"
+  ],
+  "author": "Zhang Kai Yu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhangkaiyulw/dobukulbira/issues"
+  },
+  "homepage": "https://github.com/zhangkaiyulw/dobukulbira#readme"
+}

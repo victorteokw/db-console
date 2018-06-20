@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-
 const repl = require('repl');
+const history = require('repl.history');
 const mongoose = require('mongoose');
 const glob = require('glob');
 const path = require('path');
@@ -40,7 +40,11 @@ mongoose.connect(config.mongodb.url, config.mongodb.options)
     each(mongoose.models, function(m, k) {
       global[k] = m;
     });
-    const replServer = repl.start({ useGlobal: true });
+    const replServer = repl.start({
+      useGlobal: true,
+      prompt: '>>> '
+    });
+    history(replServer, path.join(projRoot, '.dobukulbira.history'));
     replServer.on('exit', () => {
       console.log("");
       process.exit();

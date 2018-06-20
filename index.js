@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const repl = require('repl');
 const mongoose = require('mongoose');
 const glob = require('glob');

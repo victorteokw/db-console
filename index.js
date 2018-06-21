@@ -6,17 +6,11 @@ const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
 const each = require('lodash.foreach');
+const findDominantFile = require('find-dominant-file');
 
 // Get requirer file name
 const requirer = module.parent ? module.parent.filename : process.cwd();
 // Get project root
-const findDominantFile = function(dir, filename, retDir = false) {
-  while (dir !== '/') {
-    const maybe = path.join(dir, filename);
-    if (fs.existsSync(maybe)) return retDir ? dir : maybe;
-    dir = path.dirname(dir);
-  }
-};
 const projRoot = findDominantFile(requirer, 'package.json', true);
 // Get config file
 const configFile = path.join(projRoot, 'dobukulbira.config.js');

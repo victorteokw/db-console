@@ -1,12 +1,13 @@
 {
   "name": "dobukulbira",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "REPL console for modern node.js app.",
   "main": "index.js",
   "bin": {
     "dobukulbira": "index.js"
   },
   "dependencies": {
+    "find-dominant-file": "^1.0.0",
     "glob": "^7.1.2",
     "lodash.foreach": "^4.5.0",
     "repl.history": "^0.1.4"

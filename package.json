@@ -12,7 +12,10 @@
     "lodash.foreach": "^4.5.0",
     "repl.history": "^0.1.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-man": "^1.0.0"
+  },
   "peerDependencies": {
     "mongoose": ">= 4"
   },

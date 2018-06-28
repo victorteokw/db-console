@@ -30,7 +30,8 @@ mongoose.connect(config.mongodb.url, config.mongodb.options)
         global[name] = v;
       };
     };
-    each(glob.sync(path.resolve(projRoot, config.modelsDir, '**/*.js')), require);
+    each(glob.sync(path.resolve(projRoot, config.modelsDir, '**/*.js')),
+      require);
     each(mongoose.models, function(m, k) {
       global[k] = m;
     });

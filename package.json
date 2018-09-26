@@ -1,6 +1,6 @@
 {
   "name": "dobukulbira",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "REPL console for modern node.js app.",
   "main": "index.js",
   "bin": {

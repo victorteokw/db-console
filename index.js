@@ -13,7 +13,7 @@ const requirer = module.parent ? module.parent.filename : process.cwd();
 // Get project root
 const projRoot = findDominantFile(requirer, 'package.json', true);
 // Get config file
-const configFile = path.join(projRoot, 'dobukulbira.config.js');
+const configFile = path.join(projRoot, '.dobukulbirarc.js');
 if (!fs.existsSync(configFile)) {
   throw `Cannot find configuration file ${configFile}`;
 }

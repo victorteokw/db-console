@@ -21,9 +21,11 @@ if (!fs.existsSync(configFile)) {
 const config = require(configFile);
 
 // Connect database
-mongoose.connect(config.mongodb.url, Object.assign(config.mongodb.options, {
-  useNewUrlParser: true
-}))
+mongoose.connect(
+  config.mongodb.url,
+  Object.assign(config.mongodb.options || {}, {
+    useNewUrlParser: true
+  }))
   .then(function(_) {
     global.mongoose = mongoose;
     global.print = console.log;

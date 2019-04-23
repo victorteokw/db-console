@@ -1,12 +1,14 @@
 {
   "name": "db-console",
   "version": "0.1.0",
-  "description": "Database REPL console for modern node.js app.",
+  "description": "The database REPL console for modern node.js app.",
   "main": "index.js",
   "bin": {
     "db-console": "index.js"
   },
   "dependencies": {
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^5.0.5",
     "find-dominant-file": "^2.0.0",
     "glob": "^7.1.2",
     "load-any-file": "^1.0.1",

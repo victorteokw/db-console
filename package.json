@@ -1,30 +1,27 @@
 {
-  "name": "dobukulbira",
-  "version": "0.0.8",
-  "description": "REPL console for modern node.js app.",
+  "name": "db-console",
+  "version": "0.1.0",
+  "description": "Database REPL console for modern node.js app.",
   "main": "index.js",
   "bin": {
-    "dobukulbira": "index.js"
+    "db-console": "index.js"
   },
   "dependencies": {
-    "find-dominant-file": "^1.0.0",
+    "find-dominant-file": "^2.0.0",
     "glob": "^7.1.2",
-    "lodash.foreach": "^4.5.0",
+    "load-any-file": "^1.0.1",
     "repl.history": "^0.1.4"
   },
   "devDependencies": {
     "eslint": "^5.0.1",
-    "eslint-config-man": "^1.0.0"
-  },
-  "peerDependencies": {
-    "mongoose": ">= 4"
+    "eslint-config-man": "^1.0.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhangkaiyulw/dobukulbira.git"
+    "url": "git+https://github.com/zhangkaiyulw/db-console.git"
   },
   "keywords": [
     "mongoose",
@@ -36,7 +33,7 @@
   "author": "Zhang Kai Yu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zhangkaiyulw/dobukulbira/issues"
+    "url": "https://github.com/zhangkaiyulw/db-console/issues"
   },
-  "homepage": "https://github.com/zhangkaiyulw/dobukulbira#readme"
+  "homepage": "https://github.com/zhangkaiyulw/db-console#readme"
 }

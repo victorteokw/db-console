@@ -1,18 +1,19 @@
-# dobukulbira
-REPL console for modern node.js app.
+# DB Console
+
+The database REPL console for modern node.js app.
 
 ## Usage
 
-Create a config file named `dobukulbira.config.js` with the following contents.
+Create a config file named `.dbconsolerc.json` with the following contents.
 
 ``` js
 module.exports = {
   mongodb: {
-    url: "your mongodb url",
+    url: "your db url",
     options: {}
   },
   modelsDir: "models"
 }
 ```
 
-And then `dobukulbira` to start repl!
+And then `db-console` to start repl!

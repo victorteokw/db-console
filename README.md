@@ -2,6 +2,12 @@
 
 The database REPL console for modern node.js app.
 
+## Install
+
+```bash
+npm install --save-dev db-console
+```
+
 ## Usage
 
 Create a config file named `.dbconsolerc.json` with the following contents.

@@ -1,7 +1,5 @@
 const path = require('path');
 const { assert } = require('chai');
-const sinon = require('sinon');
-const app = require('../../index');
 const runProcessSync = require('../helpers/runProcessSync');
 const packageJson = require('../../package.json');
 

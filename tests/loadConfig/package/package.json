@@ -1,0 +1,6 @@
+{
+  "dbConsole": {
+    "orm": "mongoose",
+    "custom": true
+  }
+}

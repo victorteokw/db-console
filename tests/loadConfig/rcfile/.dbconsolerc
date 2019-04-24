@@ -1,0 +1,4 @@
+{
+  "orm": "sequelize-typescript",
+  "unexist": true
+}

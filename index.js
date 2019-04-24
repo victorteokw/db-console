@@ -37,7 +37,7 @@ async function startup() {
 
   // Connect database and get models from model files
   const connect = getRunner(config.orm);
-  const models = await connect(projRoot, config.url, modelFiles);
+  const [models] = await connect(projRoot, config.url, modelFiles);
 
   // Attach models to global object
   attachToGlobal(models);

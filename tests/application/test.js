@@ -56,8 +56,67 @@ describe('Output help: ', function() {
       assert.match(output, /-h, +--help +view db-console's help/);
     });
 
+    it("has option 'version'", function() {
+      assert.match(output, /-v, +--version +view db-console's version/);
+    });
+
+    it("has option 'config-file'", function() {
+      assert.match(output, /-c, +--config-file/);
+      assert.match(output, /the config file to load/);
+    });
+
+    it("has option 'history-file'", function() {
+      assert.match(output, /-H, +--history-file/);
+      assert.match(output, /the history file to use/);
+    });
+
+    it("has option 'orm-file'", function() {
+      assert.match(output, /-o, +--orm/);
+      assert.match(output, /the orm library of the models/);
+    });
+
+    it("has option 'db'", function() {
+      assert.match(output, /-d, +--db/);
+      assert.match(output, /the database connection url/);
+    });
+
+    it("has option 'models'", function() {
+      assert.match(output, /-m, +--models/);
+      assert.match(output, /model files matcher/);
+    });
+
+    it("has option 'model-base-directory'", function() {
+      assert.match(output, /-b, +--model-base-directory/);
+      assert.match(output, /where to execute model files matcher/);
+    });
+
+    it("has option 'prompt'", function() {
+      assert.match(output, /-p, +--prompt/);
+      assert.match(output, /the shape of the prompt/);
+    });
+
     it("has section 'Supported ORMs'", function() {
       assert.match(output, /Supported ORMs/);
+    });
+
+    it("has orm 'mongoose'", function() {
+      assert.match(output, /mongoose/);
+    });
+
+    it("has orm 'sequelize'", function() {
+      assert.match(output, /sequelize/);
+    });
+
+    it("has orm 'sequelize-typescript'", function() {
+      assert.match(output, /sequelize-typescript/);
+    });
+
+    it("has orm 'typegoose'", function() {
+      assert.match(output, /typegoose/);
+    });
+
+    it("has orm 'typeorm'", function() {
+      assert.match(output, /typeorm/);
     });
 
   });

@@ -1,4 +1,3 @@
-const path = require('path');
 const { assert } = require('chai');
 const attachToGlobal = require('../../lib/attachToGlobal');
 

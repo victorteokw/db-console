@@ -1,16 +1,8 @@
 const path = require('path');
 const { assert } = require('chai');
 const loadConfig = require('../../lib/loadConfig');
-
-let savedArgv = [];
-const alterArgv = () => {
-  savedArgv = process.argv;
-  process.argv = process.argv.slice(0, 2);
-};
-
-const recoverArgv = () => {
-  process.argv = savedArgv;
-};
+const alterArgv = require('../helpers/alterArgv');
+const recoverArgv = require('../helpers/recoverArgv');
 
 describe('Load config: ', function() {
 

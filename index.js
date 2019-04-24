@@ -19,13 +19,13 @@ async function startup() {
   // Show help and exit
   if (config.help) {
     showHelp();
-    process.exit(0);
+    return;
   }
 
   // Show version and exit
   if (config.version) {
     showVersion();
-    process.exit(0);
+    return;
   }
 
   // Get a filename list of models
@@ -42,4 +42,8 @@ async function startup() {
   startREPL(projRoot, config.prompt, config.historyFile);
 }
 
-startup();
+if (require.main === module) {
+  startup();
+}
+
+module.exports = startup;

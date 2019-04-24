@@ -29,7 +29,11 @@ async function startup() {
   }
 
   // Get a filename list of models
-  const modelFiles = getModelFileList(config.models, config.modelBaseDirectory);
+  const modelFiles = getModelFileList(
+    projRoot,
+    config.models,
+    config.modelBaseDirectory
+  );
 
   // Connect database and get models from model files
   const connect = getRunner(config.orm);

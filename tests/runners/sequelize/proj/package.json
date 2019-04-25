@@ -1,0 +1,12 @@
+{
+  "name": "sequelize-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "sequelize": "^5.7.5"
+  }
+}

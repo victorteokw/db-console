@@ -39,6 +39,10 @@ async function startup() {
   const connect = getRunner(config.orm);
   const [models] = await connect(projRoot, config.url, modelFiles);
 
+  if (!models) {
+    throw new Error('Model loading error.');
+  }
+
   // Attach models to global object
   attachToGlobal(models);
 

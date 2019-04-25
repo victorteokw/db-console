@@ -24,11 +24,10 @@ describe('Runner: ', function() {
       await close();
     });
 
-    it('connects to database and returns model', async function() {
+    it('connects to database and returns model', function() {
       if (config.ciBuild) return;
       assert.isOk(models.ModelOne);
       assert.isOk(models.ModelTwo);
-      await close();
     });
 
   });

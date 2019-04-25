@@ -6,16 +6,16 @@ const config = require('noenv');
 
 describe('Runner: ', function() {
 
-  describe('mongoose: ', function() {
+  describe('sequelize-typescript: ', function() {
 
     let models, close;
     before(async () => {
       if (config.ciBuild) return;
       const projDir = path.join(__dirname, 'proj');
-      const url = config.mongoose;
-      const files = walkSync(projDir, { globs: ['*.js'] })
+      const url = config.sequelizeTypescript;
+      const files = walkSync(projDir, { globs: ['models/model*.ts'] })
         .map((f) => path.join(projDir, f));
-      const runner = getRunner('mongoose');
+      const runner = getRunner('sequelize-typescript');
       [models, close] = await runner(projDir, url, files);
     });
 

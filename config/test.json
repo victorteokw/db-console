@@ -1,5 +1,6 @@
 {
-  "mongoose": "process.env.MONGOOSE_URL!",
-  "sequelize": "process.env.SEQUELIZE_URL!",
+  "mongoose": "process.env.MONGOOSE_URL",
+  "sequelize": "process.env.SEQUELIZE_URL",
+  "sequelizeTypescript": "process.env.SEQUELIZE_TYPESCRIPT_URL",
   "ciBuild": "process.env.CI_BUILD"
 }

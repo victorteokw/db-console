@@ -31,12 +31,16 @@
     "noenv": "^1.0.0",
     "nyc": "^14.0.0",
     "pg": "^7.10.0",
+    "reflect-metadata": "^0.1.13",
     "sequelize": "^5.7.5",
-    "sinon": "^7.3.2"
+    "sequelize-typescript": "^1.0.0-beta.2",
+    "sinon": "^7.3.2",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
   },
   "scripts": {
-    "test": "mocha --recursive \"./tests/**/test.js\"",
-    "test-cov": "nyc --reporter=text mocha --recursive \"./tests/**/test.js\"",
+    "test": "mocha --recursive \"./tests/**/test.js\" --timeout 4000",
+    "test-cov": "nyc --reporter=text mocha --recursive \"./tests/**/test.js\" --timeout 4000",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {

@@ -58,31 +58,31 @@ want. In this case, the default configuration file is ignored.
 
 ### Options
 
-* -h, --help
+* `-h, --help`
 view db-console's help
 
-* -v, --version
+* `-v, --version`
 view db-console's version
 
-* -c, --config-file string
+* `-c, --config-file string`
 the config file to load
 
-* -H, --history-file string
+* `-H, --history-file string`
 the history file to use
 
--o, --orm string
+* `-o, --orm string`
 the orm library of the models
 
-* -d, --db string
+* `-d, --db string`
 the database connection url
 
-* -m, --models string, regexp, [string], [regexp]
+* `-m, --models string, regexp, [string], [regexp]`
 model files matcher
 
-* -b, --model-base-directory string
+* `-b, --model-base-directory string`
 executing model files matcher in this directory
 
-* -p, --prompt string
+* `-p, --prompt string`
 the shape of the prompt
 
 ## Supported ORMs

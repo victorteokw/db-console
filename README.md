@@ -9,14 +9,89 @@
 
 The database REPL console for modern node.js app.
 
+## Design Philosophy
+
+There isn't a tool in javaScript world which behaves similar to Ruby on Rails'
+`rails console`. This is really a handy feature: opening up an REPL console and
+executing some model commands. However, javaScript is more like a split world.
+I want to make a generic console tool to hook into different ORM environments.
+
 ## Install
+
+It's recommended to install this locally to your package.
 
 ```bash
 npm install --save-dev db-console
 ```
 
-## Usage
+And add the following to your `scripts` field in `package.json`.
 
+```
+"console": "db-console"
+```
+
+## Configuration
+
+DB Console read configurations from several places.
+
+1. `dbConsole` field in `package.json`
+2. configuration file which default name is `.dbconsolerc`
+3. command line arguments
+
+### Precedence
+
+Configuration file take precedence over `dbConsole` field. And command line
+arguments have the highest precedence. You can overwrite any configuration with
+command line arguments.
+
+### Free Format
+
+You can write configuration file in any format you want. If the file doesn't
+have extension, DB Console tries to treat it as `json`, `cson` or `yaml` and
+load. If the file has extension, supported types include `js`, `json`, `ts`,
+`coffee`, `cson` and `yaml`.
+
+### Customizable
+
+You can use `--config-file` to make DB Console load the configuration file you
+want. In this case, the default configuration file is ignored.
+
+### Options
+
+* -h, --help
+view db-console's help
+
+* -v, --version
+view db-console's version
+
+* -c, --config-file string
+the config file to load
+
+* -H, --history-file string
+the history file to use
+
+-o, --orm string
+the orm library of the models
+
+* -d, --db string
+the database connection url
+
+* -m, --models string, regexp, [string], [regexp]
+model files matcher
+
+* -b, --model-base-directory string
+executing model files matcher in this directory
+
+* -p, --prompt string
+the shape of the prompt
+
+## Supported ORMs
+
+- mongoose
+- sequelize
+- sequelize-typescript
+- typegoose
+- typeorm
 
 ## License
 
